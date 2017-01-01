@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1" 
+		     xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+		     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="CouponsJPAService" transaction-type="JTA">
+  	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <jta-data-source>jdbc/COUPONS_OPS</jta-data-source>
+
+    <class>com.coupon.common.entity.GlobalServiceRelationNumberEntity</class>
+    <class>com.coupon.common.entity.GlobalCouponNumberEntity</class>
+    <class>com.coupon.common.entity.GlobalLocationNumberEntity</class>
+    <class>com.coupon.common.entity.GlobalTradeIdentificationNumberEntity</class>
+    <class>com.coupon.common.entity.FileContentDescriptionEntity</class>
+    <class>com.coupon.common.entity.ArtworkEntity</class>
+    <class>com.coupon.common.entity.ShortDescriptionEntity</class>
+    <class>com.coupon.common.entity.LegalStatementEntity</class>
+    <class>com.coupon.common.entity.LongDescriptionEntity</class>
+    <class>com.coupon.common.entity.ProductCategoryEntity</class>
+    <class>com.coupon.common.entity.MarketingMaterialEntity</class>
+    <class>com.coupon.common.entity.DistributionDetailEntity</class>
+    <class>com.coupon.common.entity.PublicationPeriodEntity</class>
+    <class>com.coupon.common.entity.AcquisitionPeriodEntity</class>
+    <class>com.coupon.common.entity.TimePeriodEmbed</class>
+    <class>com.coupon.common.entity.RecordHistoryEmbed</class>
+    <class>com.coupon.common.entity.PurchaseRequirementEntity</class>
+    <class>com.coupon.common.entity.PurchaseTradeItemEntity</class>
+    <class>com.coupon.common.entity.RewardEntity</class>
+    <class>com.coupon.common.entity.RewardLoyaltyPointEntity</class>
+    <class>com.coupon.common.entity.RewardTradeItemEntity</class>
+    <class>com.coupon.common.entity.AwarderDetailEntity</class>
+    <class>com.coupon.common.entity.AwarderPointOfSaleEntity</class>
+    <class>com.coupon.common.entity.RedemptionPeriodEntity</class>
+    <class>com.coupon.common.entity.FinancialSettlementDetailEntity</class>
+    <class>com.coupon.common.entity.UsageConditionEntity</class>
+    <class>com.coupon.common.entity.OfferEntity</class>
+    <class>com.coupon.process.entity.OfferSetupEntity</class>
+    <class>com.coupon.process.entity.OfferNotificationEntity</class>
+    <class>com.coupon.process.entity.CouponAcquisitionEntity</class>
+    <class>com.coupon.process.entity.CouponRedemptionRecordEntity</class>
+    <class>com.coupon.process.entity.CouponRewardEntity</class>
+    <class>com.coupon.process.entity.CouponRewardLoyaltyPointEntity</class>
+    <class>com.coupon.process.entity.CouponRewardTradeItemEntity</class>
+    <class>com.coupon.process.entity.QualifyingPurchaseEntity</class>
+    <class>com.coupon.process.entity.QualifyingPurchaseTradeItemEntity</class>
+    <class>com.coupon.process.entity.ValidateRedemptionRecordEntity</class>
+    <class>com.coupon.process.entity.ValidatePurchaseEntity</class>
+    <class>com.coupon.process.entity.ValidatePurchaseTradeItemEntity</class>
+
+    <properties>
+	  <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+
